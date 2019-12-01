@@ -1,0 +1,16 @@
+
+FROM openjdk:8
+ENV JAVA_VER 8
+ENV JAVA_HOME /usr/lib/jvm/openjdk-8
+# Set OpenJDK as the default Java
+RUN echo "export JAVA_HOME=/usr/lib/jvm/openjdk-8" >> ~/.bashrc
+#docker’s init system
+CMD ["/sbin/my_init"]
+
+
+
+FROM alpine:3.7
+ENV JAVA_VER 8
+ENV JAVA_HOME /usr/lib/jvm/openjdk-8
+# Set OpenJDK as the default Java
+RUN echo "export JAVA_HOME=/usr/lib/jvm/openjdk-8" >> ~/.bashrc
